@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-img1 = cv2.imread("mask_image.png")
-img2 = cv2.imread("mask_image2.png")
+img1 = cv2.imread("./collected_data/p1.jpeg")
+img2 = cv2.imread("./collected_data/p1(2).jpeg")
 
 img2 = cv2.resize(img2,(img1.shape[1], img1.shape[0]))
 
@@ -23,8 +23,10 @@ if(mse_val>10):
    print("There has been significant growth detected in the plant")
 else:
    print("There is no significant growth in the plant")
-cv2.imshow("difference", diff)
+# cv2.imshow("difference", diff)
+# resized_image = cv2.resize(diff, (300, 300))
+# cv2.imshow("Resized Image", resized_image)
 # cv2.imshow("1",img1)
-# cv2.imshow("2",img2)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# # cv2.imshow("2",img2)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
